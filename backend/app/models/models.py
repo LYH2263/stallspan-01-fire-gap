@@ -15,6 +15,8 @@ class Segment(Base):
     market_day_id: Mapped[int] = mapped_column(ForeignKey("market_days.id"))
     name: Mapped[str] = mapped_column(String(64))
     width_m: Mapped[float] = mapped_column(Float)
+    # 相邻两摊之间必须留出的消防净距（米），0 表示允许端点相接
+    clearance_m: Mapped[float] = mapped_column(Float, default=0.0, server_default="0")
 
 class Vendor(Base):
     __tablename__ = "vendors"
