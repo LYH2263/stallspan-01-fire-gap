@@ -91,6 +91,36 @@ h1 { margin: 0 0 0.2rem; font-size: 1.2rem; font-weight: 800; color: var(--ss-in
   writing-mode: vertical-rl;
   letter-spacing: 0.15em;
 }
+/* 摊间消防净距空隙：与引擎占用米数等比 */
+.ss-band-cell.ss-gap {
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(196,92,38,0.35) 0 4px,
+    rgba(196,92,38,0.08) 4px 8px
+  );
+  color: var(--ss-accent);
+  font-size: 0.62rem;
+  border-left: 1px dashed var(--ss-accent);
+  border-right: 1px dashed var(--ss-accent);
+  padding: 0;
+}
+.ss-band-legend {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.72rem; color: var(--ss-muted); margin: -0.25rem 0 0.5rem;
+}
+.ss-gap-swatch {
+  display: inline-block; width: 22px; height: 10px;
+  background: repeating-linear-gradient(135deg, rgba(196,92,38,0.5) 0 4px, rgba(196,92,38,0.12) 4px 8px);
+  border: 1px dashed var(--ss-accent);
+}
+.ss-clearance-input {
+  width: 5.5rem; padding: 0.25rem 0.4rem;
+  border: 2px solid var(--ss-curb); border-radius: 3px;
+  background: #fffdf6; color: var(--ss-ink);
+  font-size: 0.88rem; font-weight: 700;
+}
+.ss-clearance-hint { font-size: 0.68rem; margin-top: 0.15rem; }
+.ss-saved { margin-left: 0.5rem; }
 .ss-band-ruler {
   display: flex; justify-content: space-between;
   font-size: 0.7rem; color: var(--ss-muted); padding: 0 0.25rem;

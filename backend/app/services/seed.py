@@ -8,7 +8,7 @@ def seed_if_empty(db: Session) -> None:
         return
     day = MarketDay(name="周末夜市", day=date(2026, 9, 20))
     db.add(day); db.flush()
-    seg = Segment(market_day_id=day.id, name="东街段", width_m=30.0)
+    seg = Segment(market_day_id=day.id, name="东街段", width_m=30.0, clearance_m=0.0)
     db.add(seg); db.flush()
     db.add(Pillar(segment_id=seg.id, position_m=10.0, thickness_m=0.5, label="灯柱A"))
     db.add(Pillar(segment_id=seg.id, position_m=20.0, thickness_m=0.5, label="灯柱B"))
